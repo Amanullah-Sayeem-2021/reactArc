@@ -12,6 +12,7 @@ const AllProductView = ({
   setModal,
   setCheck,
 }) => {
+  console.log("aADDDD", products);
   if (view === "mobile") {
     return (
       <div

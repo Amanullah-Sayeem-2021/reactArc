@@ -3,15 +3,15 @@ import "./product.css";
 import ProductCart from "./cart/productCart";
 import CustomModal from "./customModal";
 import { useHistory } from "react-router";
-import { productApi } from "../../API/Product/product";
 import { scrollBottom } from "../InfinityScroll/infinityScroll";
-import useFetch from "../Hook/usefetch";
 import AllProductView from "./Views/allProductView";
+import useFetch from "./../Hook/usefetch";
+import { productApi } from "./../../API/Product/product";
 
 const AllProduct = ({ view }) => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState();
   const [modal, setModal] = useState({ show: false, item: "" });
   const history = useHistory();
   const [check, setCheck] = useState(false);
@@ -30,8 +30,6 @@ const AllProduct = ({ view }) => {
     };
     getAll();
   }, [page]);
-
-  // const products = useFetch(page, (page) => productApi.getAllData(page));
 
   return (
     <AllProductView
