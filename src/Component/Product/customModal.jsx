@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { baseUrl } from "../../API/baseUrl";
 import { categoryApi } from "../../API/Category/category";
-import { getName } from "../Utility/getName";
 import "./modal.css";
-
+import { getName } from "./../Utility/getName"
 const CustomModal = ({ modal, setModal, item, setCheck }) => {
   const [categories, setCategory] = useState();
   const [quantity, setQuantity] = useState(1);

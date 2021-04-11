@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import "./product.css";
-import ProductCart from "./cart/productCart";
-import CustomModal from "./customModal";
 import { useHistory } from "react-router";
-import { scrollBottom } from "../InfinityScroll/infinityScroll";
 import AllProductView from "./Views/allProductView";
-import useFetch from "./../Hook/usefetch";
 import { productApi } from "./../../API/Product/product";
 
 const AllProduct = ({ view }) => {
